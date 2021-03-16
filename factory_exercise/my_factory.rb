@@ -1,0 +1,2 @@
+module MyFactory
+end
