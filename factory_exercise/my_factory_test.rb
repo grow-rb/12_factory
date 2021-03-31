@@ -45,23 +45,27 @@ class MyMyFactoryTest < MiniTest::Test
   end
 
   def test_user_factory_with_trait_and_params
+    skip
     user = MyFactory.create :user, :admin, name: 'arg'
     assert_equal 'arg', user.name
     assert_equal true, user.admin
   end
 
   def test_nested_factory
+    skip
     user_with_full_name = MyFactory.create :user_with_full_name
     assert_equal 'User', user_with_full_name.class.name
     assert_equal 'John Doe', user_with_full_name.full_name
   end
 
   def test_global_sequence
+    skip
     assert_equal 'email0@example.com', MyFactory.generate(:email)
     assert_equal 'email1@example.com', MyFactory.generate(:email)
   end
 
   def test_callback
+    skip
     user_with_some_posts = MyFactory.create :user_with_some_posts
     assert_equal 3, user_with_some_posts.posts.size
   end
